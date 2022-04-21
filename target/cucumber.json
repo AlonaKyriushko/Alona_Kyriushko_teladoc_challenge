@@ -1,0 +1,226 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-04-21T02:10:14.429Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3879000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.start()"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "Add a user",
+        "description": "",
+        "id": "add-a-remove-a-user;add-a-user;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 651000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.end()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 161000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user click on Add user",
+            "match": {
+              "location": "steps.AddUserStep.user_click_on_add_user()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1078000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "enter \"Alfredo\", \"Gonzales\",\"alfredogonzales\", \"XYZ123!\",\"Company AAA\",\"Customer\", \"zxc@gmail.com\", and \"1222233212\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Alfredo\"",
+                  "offset": 6
+                },
+                {
+                  "val": "\"Gonzales\"",
+                  "offset": 17
+                },
+                {
+                  "val": "\"alfredogonzales\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"XYZ123!\"",
+                  "offset": 47
+                },
+                {
+                  "val": "\"Company AAA\"",
+                  "offset": 57
+                },
+                {
+                  "val": "\"Customer\"",
+                  "offset": 71
+                },
+                {
+                  "val": "\"zxc@gmail.com\"",
+                  "offset": 83
+                },
+                {
+                  "val": "\"1222233212\"",
+                  "offset": 104
+                }
+              ],
+              "location": "steps.AddUserStep.enter_and(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 32000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "click on save",
+            "match": {
+              "location": "steps.AddUserStep.click_on_save()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 938000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user verify that \"alfredogonzales\" is added",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"alfredogonzales\"",
+                  "offset": 17
+                }
+              ],
+              "location": "steps.AddUserStep.user_verify_that_is_added(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@task"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-21T02:10:21.254Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3110000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.start()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Delete user User Name: novak",
+        "description": "",
+        "id": "add-a-remove-a-user;delete-user-user-name:-novak",
+        "after": [
+          {
+            "result": {
+              "duration": 638000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.end()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 125000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user search \"novak\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"novak\"",
+                  "offset": 12
+                }
+              ],
+              "location": "steps.DeleteUserSteps.user_search(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 266000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "click on delete user",
+            "match": {
+              "location": "steps.DeleteUserSteps.click_on_delete_user()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.fail(Assert.java:96)\r\n\tat steps.DeleteUserSteps.user_verify_that_user_with_name_was_deleted(DeleteUserSteps.java:27)\r\n\tat ✽.user verify that user with name \"Novak\" was deleted(file:///C:/Users/akyri/IdeaProjects/Alona_Kyriushko_teladoc_challenge/src/test/resources/features/UserManipulations.feature:20)\r\n",
+              "duration": 46000000,
+              "status": "failed"
+            },
+            "line": 20,
+            "name": "user verify that user with name \"Novak\" was deleted",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Novak\"",
+                  "offset": 32
+                }
+              ],
+              "location": "steps.DeleteUserSteps.user_verify_that_user_with_name_was_deleted(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@task"
+          }
+        ]
+      }
+    ],
+    "name": "Add a remove a user",
+    "description": "",
+    "id": "add-a-remove-a-user",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/UserManipulations.feature",
+    "tags": []
+  }
+]
